@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form action="{% url 'community:update' review.pk %}" method = "POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button>[UPDATE]]</button>
+  </form>
+{% endblock content %}

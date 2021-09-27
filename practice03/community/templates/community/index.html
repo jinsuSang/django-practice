@@ -1,0 +1,12 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+  <h1>Review_List</h1>
+  {% for review in reviews %}
+    <hr>
+    <a href="{% url 'community:detail' review.pk %}"><h1>{{ review.title }}</h1></a>
+    <h3>영화 제목 : {{ review.movie_title }}</h3>
+    <h3>평점 : {{ review.rank }}</h3>
+  {% endfor %}
+
+{% endblock content %}
